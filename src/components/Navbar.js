@@ -4,6 +4,7 @@ import '../App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Navbar} from 'react-bootstrap';
 import * as ReactBootStrap from 'react-bootstrap';
+import Cart from './CartWidget';
 
 function Navbar1() {
     return (
@@ -34,6 +35,7 @@ function Navbar1() {
             </ReactBootStrap.Nav>
             <ReactBootStrap.Nav>
               <ReactBootStrap.Nav.Link href="#deets">Login</ReactBootStrap.Nav.Link>
+              <Cart />
               <ReactBootStrap.Nav.Link eventKey={2} href="#memes">
                 Carrito
               </ReactBootStrap.Nav.Link>
