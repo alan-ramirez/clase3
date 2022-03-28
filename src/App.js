@@ -9,21 +9,32 @@ import ItemListContainer from './components/ItemListContainer';
 import React, { useState, useEffect} from 'react';
 
 function App() {
-  const [contar, setContar] = useState (0);
+  const initial = 1;
+  const [contar, setContar] = useState (initial);
 
   useEffect ( () => {
     console.log("Total: " + contar)
   }, [contar]);
 
-  const encenderApagar = () => {
-    setContar (contar + 1)
+  const stock = 5
+  const sumar = () => {
+    if (contar <= stock -1) {
+      setContar (contar + 1)  
+    }
+    
+  };
+
+  const restar = () => {
+    if (contar >= 1) {
+      setContar (contar - 1)
+    }
+    
   };
 
   return (
     <div className="App">
-    <Navbar1 />
-    <ItemListContainer />
-
+      <Navbar1 />
+      <ItemListContainer />
 
       <header className="App-header">
 
@@ -39,8 +50,11 @@ function App() {
         >
           Learn React
         </a>
-        <h4>Clicks: {contar} </h4>
-        <button onClick={encenderApagar}>Encender / Apagar</button>
+        <h4>Stock: {stock} </h4>
+        <h4>Cantidad: {contar} </h4>
+        <button onClick={sumar}>+</button>
+        <button onClick={restar}>-</button>
+        
 
       </header>
     </div>
