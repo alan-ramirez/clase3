@@ -9,6 +9,7 @@ import ItemListContainer from './components/ItemListContainer';
 import React, { useState, useEffect} from 'react';
 
 function App() {
+  const saludo = "Bienvenido a la página"
   const initial = 1;
   const [contar, setContar] = useState (initial);
 
@@ -34,7 +35,8 @@ function App() {
   return (
     <div className="App">
       <Navbar1 />
-      <ItemListContainer />
+      <ItemListContainer saludo= {saludo}/>
+      
 
       <header className="App-header">
 
@@ -54,6 +56,7 @@ function App() {
         <h4>Cantidad: {contar} </h4>
         <button onClick={sumar}>+</button>
         <button onClick={restar}>-</button>
+        
         
 
       </header>
