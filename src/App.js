@@ -7,6 +7,7 @@ import * as ReactBootStrap from 'react-bootstrap';
 import ItemList from './components/ItemListContainer';
 import ItemListContainer from './components/ItemListContainer';
 import React, { useState, useEffect} from 'react';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
   const saludo = "Bienvenido a la página"
@@ -36,6 +37,7 @@ function App() {
     <div className="App">
       <Navbar1 />
       <ItemListContainer saludo= {saludo}/>
+      <ItemDetailContainer/>
       
 
       <header className="App-header">

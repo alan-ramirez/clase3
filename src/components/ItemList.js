@@ -3,7 +3,7 @@ import Item from './Item'
 
 const ItemList = ({listaProductos}) => {
   return (
-    <div>
+    <div className='d-flex'>
         {listaProductos.map((producto) => <Item producto= {producto} key= {producto.id} />)}
     </div>
   )
