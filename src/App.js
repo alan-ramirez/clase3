@@ -8,6 +8,7 @@ import ItemList from './components/ItemListContainer';
 import ItemListContainer from './components/ItemListContainer';
 import React, { useState, useEffect} from 'react';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemCount from './components/ItemCount';
 
 function App() {
   const saludo = "Bienvenido a la página"
@@ -36,31 +37,14 @@ function App() {
   return (
     <div className="App">
       <Navbar1 />
+      <ItemCount/>
       <ItemListContainer saludo= {saludo}/>
-      <ItemDetailContainer/>
-      
+      <ItemDetailContainer/> 
+
 
       <header className="App-header">
 
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <h4>Stock: {stock} </h4>
-        <h4>Cantidad: {contar} </h4>
-        <button onClick={sumar}>+</button>
-        <button onClick={restar}>-</button>
-        
-        
-
+        <h4> Texto de prueba </h4>
       </header>
     </div>
   );
