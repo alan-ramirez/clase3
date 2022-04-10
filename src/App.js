@@ -9,31 +9,11 @@ import ItemListContainer from './components/ItemListContainer';
 import React, { useState, useEffect} from 'react';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemCount from './components/ItemCount';
+import {BrowserRouter} from 'react-router-dom';
 
 function App() {
-  const saludo = "Bienvenido a la página"
-  const initial = 1;
-  const [contar, setContar] = useState (initial);
-
-  useEffect ( () => {
-    console.log("Total: " + contar)
-  }, [contar]);
-
-  const stock = 5
-  const sumar = () => {
-    if (contar <= stock -1) {
-      setContar (contar + 1)  
-    }
-    
-  };
-
-  const restar = () => {
-    if (contar >= 1) {
-      setContar (contar - 1)
-    }
-    
-  };
-
+  const saludo = "Bienvenido a la página";
+  
   return (
     <div className="App">
       <Navbar1 />
