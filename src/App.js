@@ -9,24 +9,34 @@ import ItemListContainer from './components/ItemListContainer';
 import React, { useState, useEffect} from 'react';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemCount from './components/ItemCount';
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
   const saludo = "Bienvenido a la página";
-  
+
   return (
-    <div className="App">
-      <Navbar1 />
-      <ItemCount/>
-      <ItemListContainer saludo= {saludo}/>
-      <ItemDetailContainer/> 
+    <BrowserRouter>
+      <div className="App">
+        <Navbar1 />
+        <ItemCount/>
+        
+        <Routes>
+          <Route path='/' element= {<ItemListContainer saludo= {saludo}/> } />
+          <Route path='/category/:categoryId' element= {<ItemListContainer saludo= {saludo}/> } />
+          <Route path='/item/:itemId' element= {<ItemDetailContainer/> } />
 
 
-      <header className="App-header">
+        </Routes>
 
-        <h4> Texto de prueba </h4>
-      </header>
-    </div>
+
+        <footer className="App-footer">
+
+          <h4> Texto de prueba </h4>
+
+        </footer>
+
+      </div>
+    </BrowserRouter>
   );
 }
 

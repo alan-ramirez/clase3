@@ -35,6 +35,10 @@
   color: black;
 }
 
+#collasibleElement {
+  background-color: white ;
+  color: black;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
