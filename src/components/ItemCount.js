@@ -1,44 +1,34 @@
-import React, { useState, useEffect} from 'react';
+import { useState } from "react"
+import { Link } from "react-router-dom"
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import * as ReactBootStrap from 'react-bootstrap';
-import ReactDOM from 'react-dom'
-import { getProducts } from '../mocks/FakeAPI';
+import {LinkContainer} from "react-router-bootstrap";
 
-function ItemCount () {
-  const saludo = "Bienvenido a la página"
-  const initial = 0;
-  const [contar, setContar] = useState (initial);
+const ItemCount = ({max =10, cantidad, setCantidad, onAdd}) => {
 
-  useEffect ( () => {
-    console.log("Total: " + contar)
-  }, [contar]);
+    const handleSumar = () => {
+        cantidad < max && setCantidad (cantidad+1)
 
-  const stock = 5
-  const onAdd = () => {
-    if (contar <=  stock -1) {
-      setContar (contar + 1)  
     }
-    
-  };
 
-  const onSubstract = () => {
-    if (contar >= 1) {
-      setContar (contar - 1)
+    const handleRestar = () => {
+        cantidad > 1 && setCantidad (cantidad -1)
     }
-    
-  };
 
-  return (
-    <div className="addCart">
-      <header className="addCartHeader">
-          <h4>Stock: {stock} </h4>
-          <h4>Cantidad en Carrito: {contar} </h4>
-          <button onClick={onAdd}>Agregar</button>
-          <button onClick={onSubstract}>-</button>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <button className="btn btn-outline-primary" onClick={handleRestar}>-</button>
+            <span className="mx-2">{cantidad}</span>
+            <button className="btn btn-primary" onClick={handleSumar} >+</button>
+            <br/>
+            <button className="btn btn-secondary my-2"  onClick={onAdd}>Agregar al carrito</button>
+
+            <LinkContainer to= {`/cart`}> 
+                <ReactBootStrap.Button variant="success">Terminar mi compra</ReactBootStrap.Button>
+            </LinkContainer>
+        </div>
+    )
 }
 
-export default ItemCount;
+export default ItemCount
