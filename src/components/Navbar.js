@@ -4,7 +4,7 @@ import '../App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Navbar} from 'react-bootstrap';
 import * as ReactBootStrap from 'react-bootstrap';
-import Cart from './CartWidget';
+import Carrito from './CartWidget';
 import {Link} from "react-router-dom";
 import {LinkContainer} from "react-router-bootstrap";
 
@@ -69,13 +69,14 @@ function Navbar1() {
                 <ReactBootStrap.Nav.Link href="#deets">Login</ReactBootStrap.Nav.Link>
               </LinkContainer>
               
+              {/* Importar Carrito de CartWidget */}
+              
               <LinkContainer to="/cart">
-                <Cart />
+                <Carrito />
               </LinkContainer>
-
               <LinkContainer to="/cart">
                 <ReactBootStrap.Nav.Link eventKey={2}>
-                    Carrito
+                  Carrito
                 </ReactBootStrap.Nav.Link>
               </LinkContainer>
 

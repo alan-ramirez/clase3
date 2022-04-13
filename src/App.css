@@ -36,9 +36,14 @@
 }
 
 #collasibleElement {
-  background-color: white ;
+  background-color: #ffffff ;
   color: black;
 }
+
+.cart-widget {
+  font-size: 35px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -47,3 +52,4 @@
     transform: rotate(360deg);
   }
 }
+

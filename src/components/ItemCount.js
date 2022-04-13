@@ -23,10 +23,6 @@ const ItemCount = ({max =10, cantidad, setCantidad, onAdd}) => {
             <button className="btn btn-primary" onClick={handleSumar} >+</button>
             <br/>
             <button className="btn btn-secondary my-2"  onClick={onAdd}>Agregar al carrito</button>
-
-            <LinkContainer to= {`/cart`}> 
-                <ReactBootStrap.Button variant="success">Terminar mi compra</ReactBootStrap.Button>
-            </LinkContainer>
         </div>
     )
 }
