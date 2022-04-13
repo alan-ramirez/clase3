@@ -8,13 +8,16 @@ import { CartContext } from '../context/CartContext';
 
 function Carrito() {
 
-    const {cartQuantity} = useContext (CartContext)
+    const {cart, cartQuantity} = useContext (CartContext)
 
     return (
+      
+      cart.length > 0 &&
       <LinkContainer to= {"/cart"} >
           <ReactBootStrap.Navbar.Brand >
             <BsFillCartFill className="cart-widget"/>
             <span> {cartQuantity()} </span>
+            <h6>Carrito</h6>
           </ReactBootStrap.Navbar.Brand>
       </LinkContainer>
 

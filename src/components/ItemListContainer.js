@@ -30,11 +30,15 @@ const ItemListContainer = ({saludo}) => {
         .finally (()=> setCargando(false))
     }, [categoryId])
 
+
+    if (cargando) {
+        return <h2> Cargando...</h2>
+    }
+
     return (
         <div>
             <h1>{saludo}</h1>
-            {cargando ? <p>Cargando...</p> : <ItemList listaProductos={listaProductos}/>}
-            
+            <ItemList listaProductos={listaProductos}/>
         </div>
     )
     }

@@ -73,12 +73,9 @@ function Navbar1() {
               
               <LinkContainer to="/cart">
                 <Carrito />
+
               </LinkContainer>
-              <LinkContainer to="/cart">
-                <ReactBootStrap.Nav.Link eventKey={2}>
-                  Carrito
-                </ReactBootStrap.Nav.Link>
-              </LinkContainer>
+
 
             </ReactBootStrap.Nav>
           </ReactBootStrap.Navbar.Collapse>
