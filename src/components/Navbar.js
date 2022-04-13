@@ -69,7 +69,7 @@ function Navbar1() {
                 <ReactBootStrap.Nav.Link href="#deets">Login</ReactBootStrap.Nav.Link>
               </LinkContainer>
               
-              {/* Importar Carrito de CartWidget */}
+              {/* Importar Carrito desde CartWidget */}
               
               <LinkContainer to="/cart">
                 <Carrito />
