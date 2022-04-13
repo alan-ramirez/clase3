@@ -11,7 +11,7 @@ function Carrito() {
     const {cart, cartQuantity} = useContext (CartContext)
 
     return (
-      
+      {/* Si el carrito está vacio, CartWidget no se muestra */}
       cart.length > 0 &&
       <LinkContainer to= {"/cart"} >
           <ReactBootStrap.Navbar.Brand >
