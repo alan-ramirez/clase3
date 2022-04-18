@@ -12,6 +12,7 @@ import ItemCount from './components/ItemCount';
 import {BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Cart from './components/Cart';
 import {CartContext, CartProvider} from "./context/CartContext";
+import Checkout from './components/Checkout';
 
 function App() {
   const saludo = "Bienvenido a la página";
@@ -28,6 +29,7 @@ function App() {
             <Route path='/category/:categoryId' element= {<ItemListContainer saludo= {saludo}/> } />
             <Route path='/item/:itemId' element= {<ItemDetailContainer/> } />
             <Route path='/cart' element= {<Cart/> } />
+            <Route path='/checkout' element= {<Checkout/> } />
 
           </Routes>
 
