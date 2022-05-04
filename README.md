@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+<h1 align="center">
+  Music Gear Store
+  <br>
+</h1>
+<p align="center" style="font-size: 1.2rem;">E-COMMERCE PROJECT</p>
+<p align="left" style="font-size: 1rem;">Autor: Alan Maximiliano Ramirez</p>
+<p align="left" style="font-size: 1rem;">Profesor: Juan Alberto Magos Sanchez</p>
+<p align="left" style="font-size: 1rem;">Tutor: Julian Bragazzi</p>
+<p align="left" style="font-size: 1rem;">CODERHOUSE - REACT JS</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<hr />
 
-## Available Scripts
+## Introducción
 
-In the project directory, you can run:
+Este proyecto representa la entrega final del módulo de React JS de la carrera de Desarrollo Full Stack de Coderhouse. El mismo comprende la creación de una aplicación web mediante el uso de React, en la cual el usuario debera poder realizar la compra de distintos productos (sin incluir la integración a una pasarela de pagos). En este caso, los productos son instrumentos musicales y equipamiento, los cuales podrán ser filtrados accediento a las distintas secciones de la página. Además, se incluyeron secciones actualmente sin uso en la app, pero con el objetivo de utilizarlas en un futuro (Inicio, Nosotros y Login). Al accesar a estos links, tendremos acceso a secciones sin contenido.
 
-### `npm start`
+## User story/brief
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El usuario puede navegar por los productos (exhibidos en su totalidad en la home) e ir a sus detalles mediante click al botón "Ver mas".    
+Desde el detalle se puede visualizar el nombre del producto, descripción, foto, precio, stock y puede agregarlo al carrito. 
+Al realizar esta acción, aparecerá en pantalla el botón "Terminar mi compra". Accediendo a este botón, se puede visualizar un listado compacto de la orden con los productos, cantidades individuales y el precio total. Para avanzar con el proceso de compra, el usuario hará click nuevamente en el botón "Terminar mi compra".
+En el checkout, el usuario debera ingresar su nombre, e-mail y telefóno. Luego se activará el botón de ‘Realizar compra’.
+Luego de clickear en ‘Realizar compra’, se muestra un mensaje de compra exitosa, junto con el número de orden. La orden se guarda en la base de datos de Firestore, y contiene todos los productos, la fecha, número de orden y cantidades, junto con los datos del usuario.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Contenidos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Componentes
+- [Cart](#Cart)
+- [CartWidget](#CartWidget)
+- [Checkout](#Checkout)
+- [Item](#Item)
+- [ItemCount](#ItemCount)
+- [ItemDetail](#ItemDetail)
+- [ItemDetailContainer](#ItemDetailContainer)
+- [ItemList](#ItemList)
+- [ItemListContainer](#ItemListContainer)
+- [Navbar](#Navbar)
 
-### `npm run build`
+- [CartContext](#CartContext)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Agradecimientos](#Agradecimientos)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Cart
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Componente del carrito. El mismo se habilita luego de agregar un producto al carrito, y nos permite ver desde el navbar la cantidad de productos agregados al carrito. Además, contiene la funcionalidad para avanzar en el proceso de la compra.
 
-### `npm run eject`
+## Checkout
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Contiene el formulario y las funciones para realizar el envío de la información de la compra a Firebase
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Item
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Componente de la tarjeta de producto, que permite la visualización del nombre, el stock y acceder al botón "Ver más". Realizado con React Bootstrap.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ItemCount
+Permite incrementar, decrementar y agregar productos al carrito.
 
-## Learn More
+## ItemDetail
+Muestra el producto agregado al carrito, y permite el acceso a "Terminar mi compra"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ItemDetailContainer
+Realiza el muestreo de los productos y muestra el mensaje de carga
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ItemList
+Lista de productos
 
-### Code Splitting
+## ItemListContainer
+Contenedor de los productos. En él se efectúa el armado de la referencia de forma sincrónica y el llamado de manera asincrónica a esa referencia.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Navbar
+Barra de navegación. Contiene los links a las secciones de la página, el logo y el carrito. Realizado con React Bootstrap.
 
-### Analyzing the Bundle Size
+## CartContext
+Contiene la funcionalidad para operar sobre el carrito, permitiendo obtener los items presentes en el carrito, cantidades, total, elimiar items y vaciar el carrito.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Agradecimientos
+Muchas gracias al profesor Juan Alberto Magos Sanchez, por explicar los conceptos de forma clara y concisa, y además por efectuar la resolución de los desafíos y explicarlos de manera sencilla. 
+Además, agradecer al tutor Julian Bragazzi por estar siempre disponible para consultas y por las correcciones efectuadas sobre los desafíos. 

@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { db } from '../firebase/config'
- /*     Si no uso Firestore, importo getProducts
-import { getProducts } from '../mocks/FakeAPI'
-
-*/
 import ItemDetail from './ItemDetail'
 import { doc, getDoc } from 'firebase/firestore'
 
@@ -26,17 +22,6 @@ const {itemId} = useParams ()
           .finally (() =>{
             setCargandin(false)
           })
- /*     Si no uso Firestore, uso getProducts
-
-        getProducts
-        .then ((res)=>
-          setProductDetail(res.find((item) => item.id === itemId )))
-
-
-        .catch ((error) => console.log(error))
-        .finally (() => setCargandin(false))
-
-      */
     }, [itemId])
     console.log (productDetail)
 

@@ -4,9 +4,6 @@ import * as ReactBootStrap from 'react-bootstrap';
 import ReactDOM from 'react-dom'
 import React, { useState, useEffect} from 'react';
 import ItemList from './ItemList';
-/* Si no uso FireStore, importo FakeAPI
-import { getProducts } from '../mocks/FakeAPI';
-*/
 import { useParams } from 'react-router-dom';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../firebase/config';
@@ -37,23 +34,6 @@ const ItemListContainer = ({saludo}) => {
             .finally (() =>{
                 setCargando(false)
             })  
-
-/* Si no uso Firestore, uso FakeAPI
-        getProducts
-        .then ((res) => {
-
-            if (categoryId) {
-
-                setListaProductos(res.filter ( (productos) => productos.category === categoryId) )
-            } else {
-                setListaProductos(res)
-            }
-            })
-
-        .catch ((error) => console.log (error))
-        .finally (()=> setCargando(false))
-
-    */
 
     }, [categoryId])
 

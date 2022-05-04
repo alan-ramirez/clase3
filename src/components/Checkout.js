@@ -78,7 +78,7 @@ const Checkout = () => {
         <div className='container my-5'>
             <h2>Checkout</h2>
             <hr/>
-
+        
             <form onSubmit={handleSubmit}>
                 <input 
                     className="form-control my-2"
@@ -104,8 +104,8 @@ const Checkout = () => {
                     name= 'phone'
                     onChange = {handleInputChange}
                 />
+                <button className='btn btn-primary' type='submit' disabled={!values.email} disabled={!values.name} disabled={!values.phone} >Realizar compra</button>
 
-                <button className='btn btn-primary' type='submit'>Enviar</button>
             </form>
 
         </div>
