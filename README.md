@@ -4,7 +4,7 @@
 </h1>
 <p align="center" style="font-size: 1.2rem;">E-COMMERCE PROJECT</p>
 <p align="left" style="font-size: 1rem;">Autor: Alan Maximiliano Ramirez</p>
-<p align="left" style="font-size: 1rem;">Profesor: Juan Alberto Magos Sanchez</p>
+<p align="left" style="font-size: 1rem;">Profesor: Conrado Lanusse</p>
 <p align="left" style="font-size: 1rem;">Tutor: Julian Bragazzi</p>
 <p align="left" style="font-size: 1rem;">CODERHOUSE - REACT JS</p>
 
@@ -75,5 +75,5 @@ Barra de navegación. Contiene los links a las secciones de la página, el logo 
 Contiene la funcionalidad para operar sobre el carrito, permitiendo obtener los items presentes en el carrito, cantidades, total, elimiar items y vaciar el carrito.
 
 ## Agradecimientos
-Muchas gracias al profesor Juan Alberto Magos Sanchez, por explicar los conceptos de forma clara y concisa, y además por efectuar la resolución de los desafíos y explicarlos de manera sencilla. 
+Muchas gracias al profesor Conrado Lanusse, por explicar los conceptos de forma clara y concisa, y además por efectuar la resolución de los desafíos y explicarlos de manera sencilla. 
 Además, agradecer al tutor Julian Bragazzi por estar siempre disponible para consultas y por las correcciones efectuadas sobre los desafíos. 
